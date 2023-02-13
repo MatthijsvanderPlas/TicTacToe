@@ -39,9 +39,15 @@ public class Board
     public virtual void ShowBoard()
     {
         Console.Clear();
-        Console.Write($" {board[0, 0]} {board[0, 1]} {board[0, 2]} \n");
-        Console.Write($" {board[1, 0]} {board[1, 1]} {board[1, 2]} \n");
-        Console.Write($" {board[2, 0]} {board[2, 1]} {board[2, 2]} \n");
+        Console.WriteLine("     |     |     ");
+        Console.WriteLine($"  {board[0, 0]}  |  {board[0, 1]}  |  {board[0, 2]}  ");
+        Console.WriteLine("_____|_____|_____");
+        Console.WriteLine("     |     |     ");
+        Console.WriteLine($"  {board[1, 0]}  |  {board[1, 1]}  |  {board[1, 2]}  ");
+        Console.WriteLine("_____|_____|_____");
+        Console.WriteLine("     |     |     ");
+        Console.WriteLine($"  {board[2, 0]}  |  {board[2, 1]}  |  {board[2, 2]}  ");
+        Console.WriteLine("     |     |     ");
     }
 
     public string CheckWinner()

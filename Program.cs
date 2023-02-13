@@ -6,18 +6,16 @@ internal abstract class Program
     {
         // Main will be a while loop "playing" the game until someone wins or there is a draw
         // Class of Board will have all the logic for creating, updating and checking for a winner
-        
+        Board board = new Board();   
         bool playGame = true;
         
         while (playGame)
         {
-            // big loop creates a new fresh board. 
+            // outer loop starts the game.
             // starts the inner game loop
             // handles the restart of the game
-            Board board = new Board();     
             Game newGame = new Game(board);   
             bool winner = false;
-            
             
             // Inner loop handles the single games logic 
             // going through each round adding X or O
@@ -27,6 +25,7 @@ internal abstract class Program
                 newGame.PlayRound();
                 winner = newGame.IsWinner();
             }
+            
             // If you wish to play again playGame will be true and starts a new loop
             // any other input will end the game
             Console.WriteLine("Play again y/n?");
@@ -38,7 +37,6 @@ internal abstract class Program
             }
         }
     }
-
     private static bool Restart(string playerChoice) => playerChoice == "y";
 }
 
