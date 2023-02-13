@@ -33,7 +33,7 @@ public class Board
                 }
             }
         }
-        Console.WriteLine("Number has already been chosen.");
+        Console.WriteLine("Incorrect input. Please try again!");
         return false;
     }
     public virtual void ShowBoard()
